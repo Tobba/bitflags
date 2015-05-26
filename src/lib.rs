@@ -140,6 +140,7 @@ macro_rules! bitflags {
             bits: $T,
         }
 
+        #[allow(non_upper_case_globals)]
         $($(#[$Flag_attr])* pub const $Flag: $BitFlags = $BitFlags { bits: $value };)+
 
         impl $BitFlags {
