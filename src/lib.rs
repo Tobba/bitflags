@@ -138,7 +138,7 @@ macro_rules! bitflags {
         }
 
         impl $BitFlags {
-            $($(#[$Flag_attr])* const $Flag: $BitFlags = $BitFlags { bits: $value };)+
+            $($(#[$Flag_attr])* pub const $Flag: $BitFlags = $BitFlags { bits: $value };)+
         }
 
         impl $BitFlags {
